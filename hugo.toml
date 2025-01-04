@@ -1,4 +1,8 @@
 baseURL = 'https://lunarem.com/'
 languageCode = 'en-us'
-title = 'Lunarem'
+title = 'Lunarem by Grzegorz Wilczynski'
 theme = "PaperMod"
+
+[params]
+  [params.label]
+    iconSVG = "foo"
