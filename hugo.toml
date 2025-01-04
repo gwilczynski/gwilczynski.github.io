@@ -2,4 +2,3 @@ baseURL = 'https://lunarem.com/'
 languageCode = 'en-us'
 title = 'Lunarem by Grzegorz Wilczynski'
 theme = "PaperMod"
-publishDir = 'docs'
