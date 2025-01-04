@@ -1,2 +1,0 @@
-# gwilczynski.github.io
-Blog
