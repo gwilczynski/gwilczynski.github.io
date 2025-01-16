@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Interface pollution | Lunarem by Grzegorz Wilczynski</title>
 <meta name="keywords" content="">
 <meta name="description" content="I was looking for distilled information about clean architecture in the context of GO. In the meantime, my colleague found (in my opinion) the best article that describes this topic in great depth: https://pkritiotis.io/clean-architecture-in-golang/
 In general I like most of it. However, what I don&rsquo;t like is that every handler&rsquo;s builder returns an interface instead of a concrete struct, and the domain defines the repository interface.
 Here&rsquo;s why returning the concrete structure might be a better choice in many cases:">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/interface-pollution/">
+<link rel="canonical" href="https://lunarem.com/posts/interface-pollution/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="https://lunarem.com/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lunarem.com/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lunarem.com/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lunarem.com/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lunarem.com/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/interface-pollution/">
+<link rel="alternate" hreflang="en" href="https://lunarem.com/posts/interface-pollution/">
 <noscript>
     <style>
         #theme-toggle,
@@ -57,7 +57,73 @@ Here&rsquo;s why returning the concrete structure might be a better choice in ma
         }
 
     </style>
-</noscript>
+</noscript><meta property="og:url" content="https://lunarem.com/posts/interface-pollution/">
+  <meta property="og:site_name" content="Lunarem by Grzegorz Wilczynski">
+  <meta property="og:title" content="Interface pollution">
+  <meta property="og:description" content="I was looking for distilled information about clean architecture in the context of GO. In the meantime, my colleague found (in my opinion) the best article that describes this topic in great depth: https://pkritiotis.io/clean-architecture-in-golang/
+In general I like most of it. However, what I don’t like is that every handler’s builder returns an interface instead of a concrete struct, and the domain defines the repository interface.
+Here’s why returning the concrete structure might be a better choice in many cases:">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-01-16T16:10:50+01:00">
+    <meta property="article:modified_time" content="2025-01-16T16:10:50+01:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Interface pollution">
+<meta name="twitter:description" content="I was looking for distilled information about clean architecture in the context of GO. In the meantime, my colleague found (in my opinion) the best article that describes this topic in great depth: https://pkritiotis.io/clean-architecture-in-golang/
+In general I like most of it. However, what I don&rsquo;t like is that every handler&rsquo;s builder returns an interface instead of a concrete struct, and the domain defines the repository interface.
+Here&rsquo;s why returning the concrete structure might be a better choice in many cases:">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://lunarem.com/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Interface pollution",
+      "item": "https://lunarem.com/posts/interface-pollution/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Interface pollution",
+  "name": "Interface pollution",
+  "description": "I was looking for distilled information about clean architecture in the context of GO. In the meantime, my colleague found (in my opinion) the best article that describes this topic in great depth: https://pkritiotis.io/clean-architecture-in-golang/\nIn general I like most of it. However, what I don\u0026rsquo;t like is that every handler\u0026rsquo;s builder returns an interface instead of a concrete struct, and the domain defines the repository interface.\nHere\u0026rsquo;s why returning the concrete structure might be a better choice in many cases:\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "I was looking for distilled information about clean architecture in the context of GO. In the meantime, my colleague found (in my opinion) the best article that describes this topic in great depth: https://pkritiotis.io/clean-architecture-in-golang/\nIn general I like most of it. However, what I don’t like is that every handler’s builder returns an interface instead of a concrete struct, and the domain defines the repository interface.\nHere’s why returning the concrete structure might be a better choice in many cases:\n✨ Interfaces Should Be Defined by Consumers. Interfaces are generally more useful when defined by the consuming code rather than the producing code. Returning a concrete struct instead allows the consumer to define and use their own interfaces as needed. This decouples the producer from the consumer and avoids forcing a specific abstraction on the user of the handler\n✨ Interface Segregation. Returning the concrete struct allows you to add methods to the struct in the future without breaking backward compatibility. If you return an interface and later need to add a method, all implementations of that interface need to be updated, which can be disruptive.\n✨ Testability and Mocking. When the factory function returns the struct, consumers can create their own interfaces based on their specific needs. This makes it easier to mock the behavior for testing since the interface can be narrower and focused on the specific methods the test cares about.\nAs an appendix, I recommend this article https://100go.co/5-interface-pollution/, and the entire book https://www.manning.com/books/100-go-mistakes-and-how-to-avoid-them in general.\nHappy Hacking!\n",
+  "wordCount" : "251",
+  "inLanguage": "en",
+  "datePublished": "2025-01-16T16:10:50+01:00",
+  "dateModified": "2025-01-16T16:10:50+01:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lunarem.com/posts/interface-pollution/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Lunarem by Grzegorz Wilczynski",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lunarem.com/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
 <body class="" id="top">
@@ -75,7 +141,7 @@ Here&rsquo;s why returning the concrete structure might be a better choice in ma
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="Lunarem by Grzegorz Wilczynski (Alt + H)">
+            <a href="https://lunarem.com/" accesskey="h" title="Lunarem by Grzegorz Wilczynski (Alt + H)">
               <svg height="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 658.91 160.62"><title>Asset 1</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path d="M-45.66-595.45-31-610.1s7.33,7.33,0,14.65l-7.32,7.33Z" transform="translate(115 694)" style="fill:#58595b"/><path d="M11.37-549.62V-535a136.55,136.55,0,0,1-117.49-38.48q-4.71-4.71-8.88-9.76l10.41-10.4a124.53,124.53,0,0,0,8.89,9.9,121.52,121.52,0,0,0,40.45,26.87,122.06,122.06,0,0,0,46,8.94,124.2,124.2,0,0,0,20-1.63Z" transform="translate(115 694)" style="fill:#58595b"/><path d="M24.31-672.75a72.52,72.52,0,0,0-102.57,0,72.47,72.47,0,0,0-19,69.33,116.17,116.17,0,0,0,9,10.15,118.9,118.9,0,0,0,9.6,8.59l7.29-36.41,14.65,14.65,7.33-7.32c11-11,22-7.33,22-7.33L9.29-657.73C24-643.07,13-624.74-5.36-599.11c-9,12.57-16.16,26.75-21.16,38a116.8,116.8,0,0,0,39.39.25,72.38,72.38,0,0,0,11.44-9.34A72.52,72.52,0,0,0,24.31-672.75Zm-92.37,29.28-9.13-4.9a57.11,57.11,0,0,1,36.3-28.35l2.53,10.05A46.7,46.7,0,0,0-68.06-643.47Zm41.1-24.6a47.93,47.93,0,0,0-6.23.41l-1.37-10.27a58.32,58.32,0,0,1,7.6-.5Z" transform="translate(115 694)" style="fill:#58595b"/><path d="M85.67-573.58v-80.27h14.9v65.94H124v14.33Z" transform="translate(115 694)" style="fill:#58595b"/><path d="M174.34-653.85h14.91v53.56c0,19.38-10.44,27.86-24.43,27.86s-24.88-8.48-24.88-28v-53.44h14.91v54.24c0,7.92,2.86,12.85,9.74,12.85,7.23,0,9.75-5.16,9.75-13Z" transform="translate(115 694)" style="fill:#58595b"/><path d="M247.65-573.58l-20.53-45.06c-.91-2.18-1.94-5.39-1.94-5.39H225s.11,3.44.11,6v44.49h-13.3v-80.27H226l20.18,43.92a50,50,0,0,1,2,5.39h.23c0-.57-.12-3.9-.12-5.85v-43.46h13.31v80.27Z" transform="translate(115 694)" style="fill:#58595b"/><path d="M317.13-573.58l-2.64-12.61H295.92l-2.53,12.61H277.8l19-80.27h17l19,80.27Zm-10.55-52.06c-.46-2.18-1.14-6.88-1.14-6.88h-.23s-.69,4.7-1.15,6.88l-5.39,26.26h13.19Z" transform="translate(115 694)" style="fill:#58595b"/><path d="M382.6-573.58l-10-24.76c-1.14.11-2.29.11-3.44.11H364v24.65H349.11v-80.27h22.25c18.23,0,25.8,13.53,25.8,27.52,0,8.83-3.44,17.66-10.78,23.05l12,29.7Zm-13-39c8.49,0,12.73-5.74,12.73-13.54,0-8.14-4.36-13.53-12.84-13.53H364v27.07Z" transform="translate(115 694)" style="fill:#58595b"/><path d="M417.26-573.58v-80.27h42.66v14.34H432.17V-619h23.39v14.34H432.17v16.74h27.75v14.33Z" transform="translate(115 694)" style="fill:#58595b"/><path d="M529-573.58V-623c0-2.29.12-5.5.12-5.5h-.23s-1.38,2.75-2.53,4.58L512.6-600.75h-.23l-13.53-22.94c-1-1.83-2.75-5-2.75-5h-.23s.12,3.32.12,5.73v49.42H481.07v-80.27h16.51l12.16,21.56c1,1.84,2.63,5,2.63,5h.23l2.76-5.16,12-21.45h16.51v80.27Z" transform="translate(115 694)" style="fill:#58595b"/><path d="M-45.66-595.45-31-610.1s7.33,7.33,0,14.65l-7.32,7.33Z" transform="translate(115 694)" style="fill:#58595b"/><path d="M11.37-549.62V-535a136.55,136.55,0,0,1-117.49-38.48q-4.71-4.71-8.88-9.76l10.41-10.4a124.53,124.53,0,0,0,8.89,9.9,121.52,121.52,0,0,0,40.45,26.87,122.06,122.06,0,0,0,46,8.94,124.2,124.2,0,0,0,20-1.63Z" transform="translate(115 694)" style="fill:#58595b"/><path d="M24.31-672.75a72.52,72.52,0,0,0-102.57,0,72.47,72.47,0,0,0-19,69.33,116.17,116.17,0,0,0,9,10.15,118.9,118.9,0,0,0,9.6,8.59l7.29-36.41,14.65,14.65,7.33-7.32c11-11,22-7.33,22-7.33L9.29-657.73C24-643.07,13-624.74-5.36-599.11c-9,12.57-16.16,26.75-21.16,38a116.8,116.8,0,0,0,39.39.25,72.38,72.38,0,0,0,11.44-9.34A72.52,72.52,0,0,0,24.31-672.75Zm-92.37,29.28-9.13-4.9a57.11,57.11,0,0,1,36.3-28.35l2.53,10.05A46.7,46.7,0,0,0-68.06-643.47Zm41.1-24.6a47.93,47.93,0,0,0-6.23.41l-1.37-10.27a58.32,58.32,0,0,1,7.6-.5Z" transform="translate(115 694)" style="fill:#58595b"/><path d="M85.67-573.58v-80.27h14.9v65.94H124v14.33Z" transform="translate(115 694)" style="fill:#58595b"/><path d="M174.34-653.85h14.91v53.56c0,19.38-10.44,27.86-24.43,27.86s-24.88-8.48-24.88-28v-53.44h14.91v54.24c0,7.92,2.86,12.85,9.74,12.85,7.23,0,9.75-5.16,9.75-13Z" transform="translate(115 694)" style="fill:#58595b"/><path d="M247.65-573.58l-20.53-45.06c-.91-2.18-1.94-5.39-1.94-5.39H225s.11,3.44.11,6v44.49h-13.3v-80.27H226l20.18,43.92a50,50,0,0,1,2,5.39h.23c0-.57-.12-3.9-.12-5.85v-43.46h13.31v80.27Z" transform="translate(115 694)" style="fill:#58595b"/><path d="M317.13-573.58l-2.64-12.61H295.92l-2.53,12.61H277.8l19-80.27h17l19,80.27Zm-10.55-52.06c-.46-2.18-1.14-6.88-1.14-6.88h-.23s-.69,4.7-1.15,6.88l-5.39,26.26h13.19Z" transform="translate(115 694)" style="fill:#58595b"/><path d="M382.6-573.58l-10-24.76c-1.14.11-2.29.11-3.44.11H364v24.65H349.11v-80.27h22.25c18.23,0,25.8,13.53,25.8,27.52,0,8.83-3.44,17.66-10.78,23.05l12,29.7Zm-13-39c8.49,0,12.73-5.74,12.73-13.54,0-8.14-4.36-13.53-12.84-13.53H364v27.07Z" transform="translate(115 694)" style="fill:#58595b"/><path d="M417.26-573.58v-80.27h42.66v14.34H432.17V-619h23.39v14.34H432.17v16.74h27.75v14.33Z" transform="translate(115 694)" style="fill:#58595b"/><path d="M529-573.58V-623c0-2.29.12-5.5.12-5.5h-.23s-1.38,2.75-2.53,4.58L512.6-600.75h-.23l-13.53-22.94c-1-1.83-2.75-5-2.75-5h-.23s.12,3.32.12,5.73v49.42H481.07v-80.27h16.51l12.16,21.56c1,1.84,2.63,5,2.63,5h.23l2.76-5.16,12-21.45h16.51v80.27Z" transform="translate(115 694)" style="fill:#58595b"/></g></g></svg>
             </a>
             <div class="logo-switches">
@@ -137,7 +203,7 @@ Here&rsquo;s why returning the concrete structure might be a better choice in ma
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">Lunarem by Grzegorz Wilczynski</a></span> · 
+        <span>&copy; 2025 <a href="https://lunarem.com/">Lunarem by Grzegorz Wilczynski</a></span> · 
 
     <span>
         Powered by
