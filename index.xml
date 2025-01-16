@@ -2,17 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Lunarem by Grzegorz Wilczynski</title>
-    <link>https://lunarem.com/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Lunarem by Grzegorz Wilczynski</description>
     <generator>Hugo -- 0.140.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 04 Jan 2025 20:52:37 +0100</lastBuildDate>
-    <atom:link href="https://lunarem.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 16 Jan 2025 16:10:50 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Interface pollution</title>
+      <link>http://localhost:1313/posts/interface-pollution/</link>
+      <pubDate>Thu, 16 Jan 2025 16:10:50 +0100</pubDate>
+      <guid>http://localhost:1313/posts/interface-pollution/</guid>
+      <description>&lt;p&gt;I was looking for distilled information about clean architecture in the context of GO. In the meantime, my colleague found (in my opinion) the best article that describes this topic in great depth: &lt;a href=&#34;https://pkritiotis.io/clean-architecture-in-golang/&#34;&gt;https://pkritiotis.io/clean-architecture-in-golang/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In general I like most of it. However, what I don&amp;rsquo;t like is that every handler&amp;rsquo;s builder returns an interface instead of a concrete struct, and the domain defines the repository interface.&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s why returning the concrete structure might be a better choice in many cases:&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Hello World</title>
-      <link>https://lunarem.com/posts/hello-world/</link>
+      <link>http://localhost:1313/posts/hello-world/</link>
       <pubDate>Sat, 04 Jan 2025 20:52:37 +0100</pubDate>
-      <guid>https://lunarem.com/posts/hello-world/</guid>
+      <guid>http://localhost:1313/posts/hello-world/</guid>
       <description>&lt;p&gt;&amp;ldquo;Hello, World!&amp;rdquo; is often the first program written when learning a new programming language. It&amp;rsquo;s simple, yet powerful—it marks the beginning of a new adventure in coding. It&amp;rsquo;s a rite of passage for every programmer, a small but significant moment that confirms everything is set up correctly and working as expected.&lt;/p&gt;</description>
     </item>
   </channel>
