@@ -1,6 +1,8 @@
 +++
 date = '2025-01-22T11:08:45+01:00'
 title = 'Old Habits'
+tags = ["golang", "softwarearchitecture"]
+author = "Grzegorz Wilczynski"
 +++
 
 Years ago, before JavaScript made its way to the server side (yes, that’s an important digression, believe it or not), One of my colleagues once shared an intriguing observation with me: backend programmers, whether they come from a C# or Java background, often resemble drivers switching to bicycles when they start programming in JavaScript. It’s as if they forget all the rules.

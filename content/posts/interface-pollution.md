@@ -1,6 +1,8 @@
 +++
 date = '2025-01-16T16:10:50+01:00'
 title = 'Interface pollution'
+tags = ["golang", "softwarearchitecture"]
+author = "Grzegorz Wilczynski"
 +++
 
 I was looking for distilled information about clean architecture in the context of GO. In the meantime, my colleague found (in my opinion) the best article that describes this topic in great depth: https://pkritiotis.io/clean-architecture-in-golang/
