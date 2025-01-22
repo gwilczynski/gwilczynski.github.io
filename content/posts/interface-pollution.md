@@ -1,7 +1,7 @@
 +++
 date = '2025-01-16T16:10:50+01:00'
 title = 'Interface pollution'
-tags = ["golang", "softwarearchitecture"]
+tags = ["golang", "software architecture"]
 author = "Grzegorz Wilczynski"
 +++
 

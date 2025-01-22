@@ -1,7 +1,7 @@
 +++
 date = '2025-01-22T11:08:45+01:00'
 title = 'Old Habits'
-tags = ["golang", "softwarearchitecture"]
+tags = ["golang", "software architecture"]
 author = "Grzegorz Wilczynski"
 +++
 
