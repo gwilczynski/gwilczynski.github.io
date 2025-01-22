@@ -17,4 +17,4 @@ Here's why returning the concrete structure might be a better choice in many cas
 
 As an appendix, I recommend this article https://100go.co/5-interface-pollution/, and the entire book https://www.manning.com/books/100-go-mistakes-and-how-to-avoid-them in general.
 
-Happy Hacking!
+Happy hacking! 🚀
