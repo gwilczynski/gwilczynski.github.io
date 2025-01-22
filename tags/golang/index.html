@@ -5,13 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Interface pollution | Lunarem by Grzegorz Wilczynski</title>
-<meta name="keywords" content="golang, softwarearchitecture">
-<meta name="description" content="I was looking for distilled information about clean architecture in the context of GO. In the meantime, my colleague found (in my opinion) the best article that describes this topic in great depth: https://pkritiotis.io/clean-architecture-in-golang/
-In general I like most of it. However, what I don&rsquo;t like is that every handler&rsquo;s builder returns an interface instead of a concrete struct, and the domain defines the repository interface.
-Here&rsquo;s why returning the concrete structure might be a better choice in many cases:">
-<meta name="author" content="Grzegorz Wilczynski">
-<link rel="canonical" href="https://lunarem.com/posts/interface-pollution/">
+<title>Golang | Lunarem by Grzegorz Wilczynski</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="https://lunarem.com/tags/golang/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://lunarem.com/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://lunarem.com/favicon-16x16.png">
@@ -20,7 +18,8 @@ Here&rsquo;s why returning the concrete structure might be a better choice in ma
 <link rel="mask-icon" href="https://lunarem.com/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://lunarem.com/posts/interface-pollution/">
+<link rel="alternate" type="application/rss+xml" href="https://lunarem.com/tags/golang/index.xml">
+<link rel="alternate" hreflang="en" href="https://lunarem.com/tags/golang/">
 <noscript>
     <style>
         #theme-toggle,
@@ -57,82 +56,18 @@ Here&rsquo;s why returning the concrete structure might be a better choice in ma
         }
 
     </style>
-</noscript><meta property="og:url" content="https://lunarem.com/posts/interface-pollution/">
+</noscript><meta property="og:url" content="https://lunarem.com/tags/golang/">
   <meta property="og:site_name" content="Lunarem by Grzegorz Wilczynski">
-  <meta property="og:title" content="Interface pollution">
-  <meta property="og:description" content="I was looking for distilled information about clean architecture in the context of GO. In the meantime, my colleague found (in my opinion) the best article that describes this topic in great depth: https://pkritiotis.io/clean-architecture-in-golang/
-In general I like most of it. However, what I don’t like is that every handler’s builder returns an interface instead of a concrete struct, and the domain defines the repository interface.
-Here’s why returning the concrete structure might be a better choice in many cases:">
+  <meta property="og:title" content="Golang">
   <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-01-16T16:10:50+01:00">
-    <meta property="article:modified_time" content="2025-01-16T16:10:50+01:00">
-    <meta property="article:tag" content="Golang">
-    <meta property="article:tag" content="Softwarearchitecture">
+  <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Interface pollution">
-<meta name="twitter:description" content="I was looking for distilled information about clean architecture in the context of GO. In the meantime, my colleague found (in my opinion) the best article that describes this topic in great depth: https://pkritiotis.io/clean-architecture-in-golang/
-In general I like most of it. However, what I don&rsquo;t like is that every handler&rsquo;s builder returns an interface instead of a concrete struct, and the domain defines the repository interface.
-Here&rsquo;s why returning the concrete structure might be a better choice in many cases:">
+<meta name="twitter:title" content="Golang">
+<meta name="twitter:description" content="">
 
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://lunarem.com/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Interface pollution",
-      "item": "https://lunarem.com/posts/interface-pollution/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Interface pollution",
-  "name": "Interface pollution",
-  "description": "I was looking for distilled information about clean architecture in the context of GO. In the meantime, my colleague found (in my opinion) the best article that describes this topic in great depth: https://pkritiotis.io/clean-architecture-in-golang/\nIn general I like most of it. However, what I don\u0026rsquo;t like is that every handler\u0026rsquo;s builder returns an interface instead of a concrete struct, and the domain defines the repository interface.\nHere\u0026rsquo;s why returning the concrete structure might be a better choice in many cases:\n",
-  "keywords": [
-    "golang", "softwarearchitecture"
-  ],
-  "articleBody": "I was looking for distilled information about clean architecture in the context of GO. In the meantime, my colleague found (in my opinion) the best article that describes this topic in great depth: https://pkritiotis.io/clean-architecture-in-golang/\nIn general I like most of it. However, what I don’t like is that every handler’s builder returns an interface instead of a concrete struct, and the domain defines the repository interface.\nHere’s why returning the concrete structure might be a better choice in many cases:\n✨ Interfaces Should Be Defined by Consumers. Interfaces are generally more useful when defined by the consuming code rather than the producing code. Returning a concrete struct instead allows the consumer to define and use their own interfaces as needed. This decouples the producer from the consumer and avoids forcing a specific abstraction on the user of the handler\n✨ Interface Segregation. Returning the concrete struct allows you to add methods to the struct in the future without breaking backward compatibility. If you return an interface and later need to add a method, all implementations of that interface need to be updated, which can be disruptive.\n✨ Testability and Mocking. When the factory function returns the struct, consumers can create their own interfaces based on their specific needs. This makes it easier to mock the behavior for testing since the interface can be narrower and focused on the specific methods the test cares about.\nAs an appendix, I recommend this article https://100go.co/5-interface-pollution/, and the entire book https://www.manning.com/books/100-go-mistakes-and-how-to-avoid-them in general.\nHappy hacking! 🚀\n",
-  "wordCount" : "252",
-  "inLanguage": "en",
-  "datePublished": "2025-01-16T16:10:50+01:00",
-  "dateModified": "2025-01-16T16:10:50+01:00",
-  "author":{
-    "@type": "Person",
-    "name": "Grzegorz Wilczynski"
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://lunarem.com/posts/interface-pollution/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Lunarem by Grzegorz Wilczynski",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://lunarem.com/favicon.ico"
-    }
-  }
-}
-</script>
 </head>
 
-<body class="" id="top">
+<body class="list" id="top">
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
@@ -177,36 +112,40 @@ Here&rsquo;s why returning the concrete structure might be a better choice in ma
         </ul>
     </nav>
 </header>
-<main class="main">
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    Golang
+  </h1>
+</header>
 
-<article class="post-single">
-  <header class="post-header">
-    
-    <h1 class="post-title entry-hint-parent">
-      Interface pollution
-    </h1>
-    <div class="post-meta"><span title='2025-01-16 16:10:50 +0100 CET'>January 16, 2025</span>&nbsp;·&nbsp;Grzegorz Wilczynski
-
-</div>
-  </header> 
-  <div class="post-content"><p>I was looking for distilled information about clean architecture in the context of GO. In the meantime, my colleague found (in my opinion) the best article that describes this topic in great depth: <a href="https://pkritiotis.io/clean-architecture-in-golang/">https://pkritiotis.io/clean-architecture-in-golang/</a></p>
-<p>In general I like most of it. However, what I don&rsquo;t like is that every handler&rsquo;s builder returns an interface instead of a concrete struct, and the domain defines the repository interface.</p>
-<p>Here&rsquo;s why returning the concrete structure might be a better choice in many cases:</p>
-<p>✨ Interfaces Should Be Defined by Consumers. Interfaces are generally more useful when defined by the consuming code rather than the producing code. Returning a concrete struct instead allows the consumer to define and use their own interfaces as needed. This decouples the producer from the consumer and avoids forcing a specific abstraction on the user of the handler</p>
-<p>✨ Interface Segregation. Returning the concrete struct allows you to add methods to the struct in the future without breaking backward compatibility. If you return an interface and later need to add a method, all implementations of that interface need to be updated, which can be disruptive.</p>
-<p>✨ Testability and Mocking. When the factory function returns the struct, consumers can create their own interfaces based on their specific needs. This makes it easier to mock the behavior for testing since the interface can be narrower and focused on the specific methods the test cares about.</p>
-<p>As an appendix, I recommend this article <a href="https://100go.co/5-interface-pollution/">https://100go.co/5-interface-pollution/</a>, and the entire book <a href="https://www.manning.com/books/100-go-mistakes-and-how-to-avoid-them">https://www.manning.com/books/100-go-mistakes-and-how-to-avoid-them</a> in general.</p>
-<p>Happy hacking! 🚀</p>
-
-
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Old Habits
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Years ago, before JavaScript made its way to the server side (yes, that’s an important digression, believe it or not), One of my colleagues once shared an intriguing observation with me: backend programmers, whether they come from a C# or Java background, often resemble drivers switching to bicycles when they start programming in JavaScript. It’s as if they forget all the rules.
+And here’s the thing: I think this observation holds true. Back then, JavaScript wasn’t respected. It was dismissed as a “dumb language.” A toy for web designers to sprinkle some interactivity onto their pages. Fast forward 15 years, and while JavaScript has become a powerhouse, I still see controversial code written by experienced programmers from so-called “real” languages. It’s the kind of code that makes you wonder if they left their instincts and good practices behind when they crossed over.
+...</p>
   </div>
+  <footer class="entry-footer"><span title='2025-01-22 11:08:45 +0100 CET'>January 22, 2025</span>&nbsp;·&nbsp;Grzegorz Wilczynski</footer>
+  <a class="entry-link" aria-label="post link to Old Habits" href="https://lunarem.com/posts/old-habits/"></a>
+</article>
 
-  <footer class="post-footer">
-    <ul class="post-tags">
-      <li><a href="https://lunarem.com/tags/golang/">Golang</a></li>
-      <li><a href="https://lunarem.com/tags/softwarearchitecture/">Softwarearchitecture</a></li>
-    </ul>
-  </footer>
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Interface pollution
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>I was looking for distilled information about clean architecture in the context of GO. In the meantime, my colleague found (in my opinion) the best article that describes this topic in great depth: https://pkritiotis.io/clean-architecture-in-golang/
+In general I like most of it. However, what I don’t like is that every handler’s builder returns an interface instead of a concrete struct, and the domain defines the repository interface.
+Here’s why returning the concrete structure might be a better choice in many cases:
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-01-16 16:10:50 +0100 CET'>January 16, 2025</span>&nbsp;·&nbsp;Grzegorz Wilczynski</footer>
+  <a class="entry-link" aria-label="post link to Interface pollution" href="https://lunarem.com/posts/interface-pollution/"></a>
 </article>
     </main>
     
