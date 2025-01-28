@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Golang on Lunarem by Grzegorz Wilczynski</title>
-    <link>https://lunarem.com/tags/golang/</link>
+    <link>http://localhost:1313/tags/golang/</link>
     <description>Recent content in Golang on Lunarem by Grzegorz Wilczynski</description>
-    <generator>Hugo -- 0.141.0</generator>
+    <generator>Hugo -- 0.142.0</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 22 Jan 2025 11:08:45 +0100</lastBuildDate>
-    <atom:link href="https://lunarem.com/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Old Habits</title>
-      <link>https://lunarem.com/posts/old-habits/</link>
+      <link>http://localhost:1313/posts/old-habits/</link>
       <pubDate>Wed, 22 Jan 2025 11:08:45 +0100</pubDate>
-      <guid>https://lunarem.com/posts/old-habits/</guid>
+      <guid>http://localhost:1313/posts/old-habits/</guid>
       <description>&lt;p&gt;Years ago, before JavaScript made its way to the server side (yes, that’s an important digression, believe it or not), One of my colleagues once shared an intriguing observation with me: backend programmers, whether they come from a C# or Java background, often resemble drivers switching to bicycles when they start programming in JavaScript. It’s as if they forget all the rules.&lt;/p&gt;
 &lt;p&gt;And here’s the thing: I think this observation holds true. Back then, JavaScript wasn’t respected. It was dismissed as a &amp;ldquo;dumb language.&amp;rdquo; A toy for web designers to sprinkle some interactivity onto their pages. Fast forward 15 years, and while JavaScript has become a powerhouse, I still see controversial code written by experienced programmers from so-called &amp;ldquo;real&amp;rdquo; languages. It’s the kind of code that makes you wonder if they left their instincts and good practices behind when they crossed over.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Interface pollution</title>
-      <link>https://lunarem.com/posts/interface-pollution/</link>
+      <link>http://localhost:1313/posts/interface-pollution/</link>
       <pubDate>Thu, 16 Jan 2025 16:10:50 +0100</pubDate>
-      <guid>https://lunarem.com/posts/interface-pollution/</guid>
+      <guid>http://localhost:1313/posts/interface-pollution/</guid>
       <description>&lt;p&gt;I was looking for distilled information about clean architecture in the context of GO. In the meantime, my colleague found (in my opinion) the best article that describes this topic in great depth: &lt;a href=&#34;https://pkritiotis.io/clean-architecture-in-golang/&#34;&gt;https://pkritiotis.io/clean-architecture-in-golang/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;In general I like most of it. However, what I don&amp;rsquo;t like is that every handler&amp;rsquo;s builder returns an interface instead of a concrete struct, and the domain defines the repository interface.&lt;/p&gt;
 &lt;p&gt;Here&amp;rsquo;s why returning the concrete structure might be a better choice in many cases:&lt;/p&gt;</description>

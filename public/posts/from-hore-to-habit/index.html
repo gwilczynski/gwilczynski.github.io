@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>Posts | Lunarem by Grzegorz Wilczynski</title>
-<meta name="keywords" content="">
-<meta name="description" content="Posts - Lunarem by Grzegorz Wilczynski">
-<meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/">
+<title>From Chore to Habit | Lunarem by Grzegorz Wilczynski</title>
+<meta name="keywords" content="software architecture">
+<meta name="description" content="Every time I joined a new project, I made it a point to take responsibility for fixing bugs. Why? Because fixing bugs is the best way to understand the architecture and get familiar with the codebase. Often, there’s little to no documentation, and all the knowledge is locked inside the developers’ heads. By fixing bugs (and writing tests as I went) I created my own map to navigate the codebase, uncover its quirks, and ensure I wasn’t lost.">
+<meta name="author" content="Grzegorz Wilczynski">
+<link rel="canonical" href="http://localhost:1313/posts/from-hore-to-habit/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
@@ -18,8 +18,7 @@
 <link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/posts/index.xml">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/from-hore-to-habit/">
 <noscript>
     <style>
         #theme-toggle,
@@ -59,7 +58,7 @@
 </noscript>
 </head>
 
-<body class="list" id="top">
+<body class="" id="top">
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
@@ -104,66 +103,56 @@
         </ul>
     </nav>
 </header>
-<main class="main"> 
-<header class="page-header">
-  <h1>
-    Posts
-  </h1>
-</header>
+<main class="main">
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">From Hore to Habit
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Every time I joined a new project, I made it a point to take responsibility for fixing bugs. Why? Because fixing bugs is the best way to understand the architecture and get familiar with the codebase. Often, there’s little to no documentation, and all the knowledge is locked inside the developers’ heads. By fixing bugs (and writing tests as I went) I created my own map to navigate the codebase, uncover its quirks, and ensure I wasn’t lost.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-01-28 20:45:51 +0100 CET'>January 28, 2025</span>&nbsp;·&nbsp;Grzegorz Wilczynski</footer>
-  <a class="entry-link" aria-label="post link to From Hore to Habit" href="http://localhost:1313/posts/from-hore-to-habit/"></a>
-</article>
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      From Chore to Habit
+    </h1>
+    <div class="post-meta"><span title='2025-01-28 20:45:51 +0100 CET'>January 28, 2025</span>&nbsp;·&nbsp;Grzegorz Wilczynski
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Old Habits
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Years ago, before JavaScript made its way to the server side (yes, that’s an important digression, believe it or not), One of my colleagues once shared an intriguing observation with me: backend programmers, whether they come from a C# or Java background, often resemble drivers switching to bicycles when they start programming in JavaScript. It’s as if they forget all the rules.
-And here’s the thing: I think this observation holds true. Back then, JavaScript wasn’t respected. It was dismissed as a “dumb language.” A toy for web designers to sprinkle some interactivity onto their pages. Fast forward 15 years, and while JavaScript has become a powerhouse, I still see controversial code written by experienced programmers from so-called “real” languages. It’s the kind of code that makes you wonder if they left their instincts and good practices behind when they crossed over.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-01-22 11:08:45 +0100 CET'>January 22, 2025</span>&nbsp;·&nbsp;Grzegorz Wilczynski</footer>
-  <a class="entry-link" aria-label="post link to Old Habits" href="http://localhost:1313/posts/old-habits/"></a>
-</article>
+</div>
+  </header> 
+  <div class="post-content"><p>Every time I joined a new project, I made it a point to take responsibility for fixing bugs. Why? Because fixing bugs is the best way to understand the architecture and get familiar with the codebase. Often, there’s little to no documentation, and all the knowledge is locked inside the developers’ heads. By fixing bugs (and writing tests as I went) I created my own map to navigate the codebase, uncover its quirks, and ensure I wasn’t lost.</p>
+<p>Writing tests isn’t just a technical task; it’s a mindset, a rhythm I’ve developed over time. Test Driven Development <a href="https://martinfowler.com/bliki/TestDrivenDevelopment.html">TDD</a> is now second nature to me. When I sit down to write a new feature, my first step isn’t writing the functionality itself. Instead, I start with the question: <strong>What should this code do?</strong> I define that behavior in the form of tests.</p>
+<p>But it wasn’t always like this.</p>
+<p>When I started out, I didn’t hate writing tests. In fact, I liked the idea from the moment I learned about it. Still, it was challenging. Writing unit tests required effort. Mocking, stubbing, and dealing with poorly designed code (much of which I had written myself) made testing harder than it needed to be. The problem wasn’t the concept of testing; it was the code, which hadn’t been designed with testing in mind.</p>
+<p>Over time, though, I experienced the payoff. With practice and better design patterns, writing tests became second nature. Now, I can’t imagine working without them. Tests are the guardrails that let me move fast without fear of breaking things. They give me confidence to iterate, refactor, and push forward.</p>
+<p>What if there are no bugs? What if everything just works? Test coverage might be 99%, but that doesn’t mean you fully understand how the application works.</p>
+<p>While tests give you confidence in the functionality of your code, they don’t provide an overarching understanding of the system. That’s where documentation comes in.</p>
+<p>If you’re like most developers, the idea of writing documentation probably makes you groan. It feels like a chore, much like writing unit tests did when I first started. Many of us struggle with documentation. We either overexplain irrelevant details, leave out critical information, or just skip it entirely.</p>
+<p>Here’s the thing: writing documentation doesn’t have to be hard. Like testing, it can become a habit, a natural part of your workflow. All you need is the right method. And that method is <a href="https://c4model.com/">C4</a>.</p>
+<p>Think of the C4 model as a framework to think about your system and communicate it clearly to both technical and non-technical stakeholders. Instead of writing endless pages of text, you create concise, visual diagrams that explain how your system works.</p>
+<p>The C4 model breaks your system into four layers of abstraction:</p>
+<ul>
+<li><strong>Context</strong>: What does the system do, and who uses it?</li>
+<li><strong>Containers</strong>: What are the major building blocks (apps, databases, services)?</li>
+<li><strong>Components</strong>: How are those building blocks broken down internally?</li>
+<li><strong>Code</strong>: How does the actual code support the components? (Optional if you have inline documentation)</li>
+</ul>
+<p>For example, let’s say you’re working on an e-commerce platform:</p>
+<ul>
+<li>At the <strong>Context</strong> layer, you’d describe the overall system (an online store) and its users (customers, admins) along with external systems like payment processors.</li>
+<li>At the <strong>Containers</strong> layer, you’d identify the web app, the database, and APIs that make up the system.</li>
+<li>At the <strong>Components</strong> layer, you’d zoom into the web app and explain how features like the shopping cart and user authentication work internally.</li>
+</ul>
+<p>The beauty of the C4 model is its simplicity. It captures the most important details without overwhelming readers. It’s focused, easy to understand, and effective.</p>
+<p>Once you get into the flow of using the C4 model, writing documentation stops being a chore. It becomes part of your rhythm, just like writing unit tests. It’s no longer a big, scary task you put off until the end of the project, or never do at all. Instead, it’s something you do naturally as part of your development process.</p>
+<p>Here’s my challenge to you: the next time you’re tempted to skip writing documentation, think back to how you felt about unit tests when you started. Remember how challenging they seemed at first? Consider using tools like <a href="https://structurizr.com/">Structurizr</a> alongside the C4 model to create effective, visual documentation. Over time, just like testing, documentation will give you confidence and speed.</p>
+<p>Unit tests and documentation aren’t just tools; they’re the guardrails that let us build with confidence, speed, and clarity. They separate good developers from great ones and reduce the infamous “bus factor.”</p>
+<p>Start small. Create your first Context diagram with the C4 model. Stick with it, and soon these habits will become second nature. Before long, you’ll wonder how you ever worked without them.</p>
+<p>Happy hacking! 🚀</p>
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Interface pollution
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>I was looking for distilled information about clean architecture in the context of GO. In the meantime, my colleague found (in my opinion) the best article that describes this topic in great depth: https://pkritiotis.io/clean-architecture-in-golang/
-In general I like most of it. However, what I don’t like is that every handler’s builder returns an interface instead of a concrete struct, and the domain defines the repository interface.
-Here’s why returning the concrete structure might be a better choice in many cases:
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-01-16 16:10:50 +0100 CET'>January 16, 2025</span>&nbsp;·&nbsp;Grzegorz Wilczynski</footer>
-  <a class="entry-link" aria-label="post link to Interface pollution" href="http://localhost:1313/posts/interface-pollution/"></a>
-</article>
 
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Hello World
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>“Hello, World!” is often the first program written when learning a new programming language. It’s simple, yet powerful—it marks the beginning of a new adventure in coding. It’s a rite of passage for every programmer, a small but significant moment that confirms everything is set up correctly and working as expected.
-...</p>
   </div>
-  <footer class="entry-footer"><span title='2025-01-04 20:52:37 +0100 CET'>January 4, 2025</span>&nbsp;·&nbsp;Grzegorz Wilczynski</footer>
-  <a class="entry-link" aria-label="post link to Hello World" href="http://localhost:1313/posts/hello-world/"></a>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/software-architecture/">Software Architecture</a></li>
+    </ul>
+  </footer>
 </article>
     </main>
     
