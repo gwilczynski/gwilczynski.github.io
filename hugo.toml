@@ -3,6 +3,26 @@ languageCode = 'en-us'
 title = 'Lunarem by Grzegorz Wilczynski'
 theme = "PaperMod"
 
-[params]
-  [params.label]
-    iconSVG = "foo"
+[params.homeInfoParams]
+Title = "Hi, I'm Greg"
+Content = "As a seasoned software engineer with a passion for innovation and systems thinking, I excel in designing and delivering scalable, impactful solutions. Leveraging strengths in Input, Deliberative, Connectedness, Intellection, and Ideation, I bring a thoughtful and creative approach to solving complex technical challenges while aligning with organizational goals. This is my blog, hope you enjoy it."
+
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/gwilczynski"
+
+[[params.socialIcons]]
+name = "bluesky"
+url = "https://bsky.app/profile/lunarem.bsky.social"
+
+[[params.socialIcons]]
+name = "mastodon"
+url = "https://mastodon.social/@lunarem"
+
+[[params.socialIcons]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/grzegorz-wilczynski"
+
+[[params.socialIcons]]
+name = "twitter"
+url = "https://x.com/lunarem_com"
