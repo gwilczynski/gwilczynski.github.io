@@ -2,19 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://lunarem.com/</loc>
+    <lastmod>2025-02-24T16:03:15+01:00</lastmod>
+  </url><url>
+    <loc>https://lunarem.com/tags/management/</loc>
+    <lastmod>2025-02-24T16:03:15+01:00</lastmod>
+  </url><url>
+    <loc>https://lunarem.com/posts/</loc>
+    <lastmod>2025-02-24T16:03:15+01:00</lastmod>
+  </url><url>
+    <loc>https://lunarem.com/tags/</loc>
+    <lastmod>2025-02-24T16:03:15+01:00</lastmod>
+  </url><url>
+    <loc>https://lunarem.com/posts/what-just-doesnt-matter/</loc>
+    <lastmod>2025-02-24T16:03:15+01:00</lastmod>
+  </url><url>
     <loc>https://lunarem.com/posts/from-hore-to-habit/</loc>
     <lastmod>2025-01-28T20:45:51+01:00</lastmod>
   </url><url>
-    <loc>https://lunarem.com/</loc>
-    <lastmod>2025-01-28T20:45:51+01:00</lastmod>
-  </url><url>
-    <loc>https://lunarem.com/posts/</loc>
-    <lastmod>2025-01-28T20:45:51+01:00</lastmod>
-  </url><url>
     <loc>https://lunarem.com/tags/software-architecture/</loc>
-    <lastmod>2025-01-28T20:45:51+01:00</lastmod>
-  </url><url>
-    <loc>https://lunarem.com/tags/</loc>
     <lastmod>2025-01-28T20:45:51+01:00</lastmod>
   </url><url>
     <loc>https://lunarem.com/tags/golang/</loc>
