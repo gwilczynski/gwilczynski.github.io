@@ -2,6 +2,7 @@ baseURL = 'https://lunarem.com/'
 languageCode = 'en-us'
 title = 'Lunarem by Grzegorz Wilczynski'
 theme = "PaperMod"
+frontmatter = ["yaml", "toml", "json"]
 
 [params.homeInfoParams]
 Title = "Hi, I'm Greg"

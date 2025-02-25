@@ -4,10 +4,17 @@
     <title>Tags on Lunarem by Grzegorz Wilczynski</title>
     <link>https://lunarem.com/tags/</link>
     <description>Recent content in Tags on Lunarem by Grzegorz Wilczynski</description>
-    <generator>Hugo -- 0.142.0</generator>
+    <generator>Hugo -- 0.144.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 Jan 2025 20:45:51 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 24 Feb 2025 16:03:15 +0100</lastBuildDate>
     <atom:link href="https://lunarem.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Management</title>
+      <link>https://lunarem.com/tags/management/</link>
+      <pubDate>Mon, 24 Feb 2025 16:03:15 +0100</pubDate>
+      <guid>https://lunarem.com/tags/management/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Software Architecture</title>
       <link>https://lunarem.com/tags/software-architecture/</link>
