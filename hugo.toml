@@ -17,13 +17,5 @@ name = "bluesky"
 url = "https://bsky.app/profile/lunarem.bsky.social"
 
 [[params.socialIcons]]
-name = "mastodon"
-url = "https://mastodon.social/@lunarem"
-
-[[params.socialIcons]]
 name = "linkedin"
 url = "https://www.linkedin.com/in/grzegorz-wilczynski"
-
-[[params.socialIcons]]
-name = "twitter"
-url = "https://x.com/lunarem_com"
